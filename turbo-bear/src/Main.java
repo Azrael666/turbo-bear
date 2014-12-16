@@ -10,9 +10,9 @@ import com.mysql.jdbc.Connection;
 public class Main {
 
 	/**
-	 * Prueft ob eine Verbindung zum Datenbank-Server möglich ist
+	 * Prueft ob eine Verbindung zum Datenbank-Server moeglich ist
 	 * 
-	 * @return available Die verfügbarkeit des Servers liefert true wenn dem so ist 
+	 * @return available Die verfuegbarkeit des Servers liefert true wenn dem so ist 
 	 */
 	public static boolean checkDatabase() {
 
@@ -174,7 +174,7 @@ public class Main {
 			password = in.next();
 			System.out.println();
 
-			// Wenn eine Verbindung zur Datenbank möglich ist
+			// Wenn eine Verbindung zur Datenbank moeglich ist
 			if (checkDatabase()) {
 
 				try {
@@ -193,7 +193,7 @@ public class Main {
 					counter++;
 				}
 
-				// Wenn keine Verbindung möglich ist
+				// Wenn keine Verbindung moeglich ist
 			} else {
 				counter--;
 				System.out.println("Keine Verbindung zum Datenbank-Server moeglich.\n");
@@ -228,7 +228,7 @@ public class Main {
 				String name = ergebnis.getString("Name");
 				String vorname = ergebnis.getString("Vorname");
 				// Wird zu String gewandelt um die Ausgabe auch von nicht
-				// unterstützten java.util.date formaten auszugeben Beispiel:
+				// unterstuetzten java.util.date formaten auszugeben Beispiel:
 				// 0000-00-00
 				String geburtsdatum = String.valueOf(ergebnis
 						.getLong("Geburtsdatum"));
