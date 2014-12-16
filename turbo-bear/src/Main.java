@@ -10,9 +10,9 @@ import com.mysql.jdbc.Connection;
 public class Main {
 
 	/**
-	 * Prüft ob eine Verbindung zum Datenbank-Server möglich ist
+	 * Prueft ob eine Verbindung zum Datenbank-Server möglich ist
 	 * 
-	 * @return available Die verfügbarkeit des Servers liefert true wem den so ist 
+	 * @return available Die verfügbarkeit des Servers liefert true wenn dem so ist 
 	 */
 	public static boolean checkDatabase() {
 
@@ -29,7 +29,7 @@ public class Main {
 	}
 
 	/**
-	 * Prüft, ob die Datenbank-Verbindung noch besteht
+	 * Prueft, ob die Datenbank-Verbindung noch besteht
 	 * 
 	 * @param con Die Verbidnung zum Server 
 	 * @return connected Wenn verbunden liefert es true sonst false
@@ -150,7 +150,7 @@ public class Main {
 	}
 
 	/**
-	 * Stellt verbindugn auf und führt dann die weiteren Methoden aus {@link #userAuswahl()}
+	 * Stellt verbindugn auf und fuehrt dann die weiteren Methoden aus {@link #userAuswahl()}
 	 * @param args Werden nicht ausgewertet 
 	 * @throws SQLException
 	 */
@@ -212,7 +212,11 @@ public class Main {
 		}
 
 	}
-
+/**
+ * Gibtdie Tabelle Patient aus 
+ * @param dbConnection Verindung zum Server 
+ * @throws Exception
+ */
 	public static void tabellePatientAusgeben(Connection dbConnection)
 			throws Exception {
 		int anzahl = 0;
