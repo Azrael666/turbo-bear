@@ -251,11 +251,4 @@ public class Main {
 		}
 	}
 	
-	public static void gewichtAendern(Connection dbConnection){
-		String name = "";
-		int gewicht = 0;
-		
-		
-		
-	}
 }
