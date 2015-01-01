@@ -1,9 +1,8 @@
 import java.awt.Desktop;
 import java.net.Socket;
 import java.net.URL;
-import java.sql.DriverManager;
-import java.sql.SQLException;
 import java.util.Scanner;
+import java.sql.*;
 
 import com.mysql.jdbc.Connection;
 
@@ -250,5 +249,13 @@ public class Main {
 		} catch (SQLException e) {
 			System.out.println(e.getMessage());
 		}
+	}
+	
+	public static void gewichtAendern(Connection dbConnection){
+		String name = "";
+		int gewicht = 0;
+		
+		
+		
 	}
 }
