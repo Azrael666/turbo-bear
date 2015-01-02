@@ -7,6 +7,8 @@ import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import java.awt.Color;
+import javax.swing.SwingConstants;
 
 
 public class Selection extends JDialog {
@@ -25,14 +27,15 @@ public class Selection extends JDialog {
 	}
 
 	/**
-	 * Create the dialog.
+	 * Oeffnet ein neues Fenster {@link #PatientAusagbe} 
 	 */
 	public Selection() {
 		setBounds(100, 100, 450, 300);
 		getContentPane().setLayout(null);
 		{
-			JButton btnTabelle = new JButton("Tabelle Patient ausgeben");
-			btnTabelle.addActionListener(new ActionListener() {
+			JButton btnTabellePatient = new JButton("Tabelle Patient");
+			btnTabellePatient.setBackground(new Color(255, 69, 0));
+			btnTabellePatient.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
 					PatientAusgabe ausgabe = new PatientAusgabe();
 					try{
@@ -43,9 +46,8 @@ public class Selection extends JDialog {
 					}
 				}
 			});
-			btnTabelle.setBounds(12, 24, 274, 25);
-			getContentPane().add(btnTabelle);
+			btnTabellePatient.setBounds(12, 12, 142, 25);
+			getContentPane().add(btnTabellePatient);
 		}
 	}
-
 }

@@ -17,8 +17,6 @@ private final String hostname;
 /**
 * Creates a new MySQL instance
 *
-* @param plugin
-* Plugin instance
 * @param hostname
 * Name of the host
 * @param port

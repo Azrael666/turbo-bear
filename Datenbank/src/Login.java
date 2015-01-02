@@ -11,6 +11,10 @@ import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import java.sql.Connection;
 import java.sql.SQLException;
+import javax.swing.UIManager;
+import java.awt.Color;
+import java.awt.event.KeyAdapter;
+import java.awt.event.KeyEvent;
 
 
 public class Login {
@@ -50,12 +54,13 @@ public class Login {
 	 */
 	private void initialize() {
 		frame = new JFrame();
+		frame.getContentPane().setBackground(Color.WHITE);
 		frame.setBounds(100, 100, 450, 300);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 		
 		userField = new JTextField();
-		userField.setBounds(12, 61, 114, 45);
+		userField.setBounds(12, 61, 114, 19);
 		frame.getContentPane().add(userField);
 		userField.setColumns(10);
 		
@@ -72,6 +77,14 @@ public class Login {
 		frame.getContentPane().add(lblS);
 		
 		JButton btnVerbinden = new JButton("Verbinden");
+		btnVerbinden.addKeyListener(new KeyAdapter() {
+			@Override
+			public void keyPressed(KeyEvent e) {
+				
+			}
+		});
+		btnVerbinden.setForeground(new Color(0, 0, 0));
+		btnVerbinden.setBackground(new Color(255, 69, 0));
 		btnVerbinden.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				Selection selection = new Selection();
@@ -87,7 +100,7 @@ public class Login {
 				}
 			}
 		});
-		btnVerbinden.setBounds(186, 174, 117, 25);
+		btnVerbinden.setBounds(186, 174, 107, 25);
 		frame.getContentPane().add(btnVerbinden);
 	}
 }
